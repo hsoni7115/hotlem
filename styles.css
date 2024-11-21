@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a5acd, #00bcd4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Chat Container Styles */
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: linear-gradient(to right, #48c6ef, #6f86d6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat Header Styles */
+.chat-header {
+    background-color: #6f86d6;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Chat Box Styles */
+.chat-box {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Input Box Styles */
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    padding-top: 10px;
+}
+
+/* Email Box Styles */
+.email-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.email-box input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Input and Button Styles */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #48c6ef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #6f86d6;
+}
+
+/* Message Bubble Styles */
+.chat-message {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.chat-message.user-message {
+    justify-content: flex-end;
+}
+
+.chat-message.assistant-message {
+    justify-content: flex-start;
+}
+
+.chat-message p {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.chat-message.user-message p {
+    background-color: #48c6ef;
+    color: white;
+    text-align: right;
+}
+
+.chat-message.assistant-message p {
+    background-color: #f4f7fc;
+    color: #333;
+    text-align: left;
+}
