@@ -5,6 +5,7 @@
 
 
 from flask import Flask, request, jsonify, render_template
+import os
 import json
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -58,9 +59,9 @@ def chat():
     date = request.json.get('date', '')  # Get booking date from the frontend
     time = request.json.get('time', '')  # Get booking time from the frontend
 
-    # Load intents from the JSON file
-    with open('skill-Room-Booking.json', 'r') as f:
+    with open(os.path.join(os.path.dirname(__file__), 'skill-Room-Booking.json'), 'r') as f:
         intents = json.load(f)['intents']
+
 
     for intent in intents:
         if any(example['text'].lower() in user_message for example in intent['examples']):
