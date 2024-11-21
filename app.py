@@ -59,6 +59,15 @@ def chat():
     date = request.json.get('date', '')  # Get booking date from the frontend
     time = request.json.get('time', '')  # Get booking time from the frontend
 
+    # Check if the file exists
+    if os.path.exists('skill-Room-Booking.json'):
+        print("File found")
+    else:
+        print("File not found")
+
+    with open('skill-Room-Booking.json', 'r') as f:
+        intents = json.load(f)['intents']
+
     with open(os.path.join(os.path.dirname(__file__), 'skill-Room-Booking.json'), 'r') as f:
         intents = json.load(f)['intents']
 
